@@ -7,8 +7,7 @@ config = require('../config').scaffold.all
 
 # requirements end
 
-gulp.task "scaf", ["scaf:single"]
-gulp.task "scaf:single", () ->
+gulp.task "scaffold", () ->
 
   project_name = argv.s or "noname"
 

@@ -11,7 +11,7 @@ config = require("../config").concat
 
 # requirements end
 
-gulp.task "concat:bower:js", () ->
+gulp.task "concat_bower", () ->
   files = mainBowerFiles()
   gulp.src files
     .pipe plumber()

@@ -6,9 +6,8 @@ plumber = require('gulp-plumber')
 
 # requirements end
 
-gulp.task 'compile:coffee:concat', () ->
+gulp.task 'coffee', () ->
   gulp.src config.src
     .pipe plumber()
     .pipe coffee()
-    .pipe concat config.sage_name
     .pipe gulp.dest config.dest

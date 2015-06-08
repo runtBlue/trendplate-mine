@@ -7,7 +7,7 @@ plumber = require('gulp-plumber')
 
 # requirements end
 
-gulp.task 'compile:jade', () ->
+gulp.task 'jade', () ->
   gulp.src config.src, {base: config.basedir}
     .pipe plumber()
     .pipe gulpJade

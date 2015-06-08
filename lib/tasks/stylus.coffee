@@ -5,7 +5,7 @@ plumber = require('gulp-plumber')
 
 # requirements end
 
-gulp.task 'compile:stylus', () ->
+gulp.task 'stylus', () ->
   gulp.src config.src
     .pipe plumber()
     .pipe stylus()
