@@ -1,0 +1,13 @@
+mixin icon
+
+  //-
+    - Usage: +icon(type="iconType")
+    - Yield: span.icon--#{iconType}
+
+  - var type = attributes.type
+  - attributes.type = null
+
+  if (type)
+    span&attributes(attributes).icon(
+      class="icon--" + type
+      )

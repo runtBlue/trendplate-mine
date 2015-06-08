@@ -1,0 +1,16 @@
+mixin margin
+
+  //-
+    - Usage: +margin(by="2")
+    - Yield: div.margin(style="height: 2em;")
+
+  - var by = attributes.by
+  - attributes.by = null
+
+  if (by)
+    if (attributes.style)
+      - attributes.style += "; height:" + by + "em;"
+    else
+      - attributes.style = "height:" + by + "em;"
+
+  div&attributes(attributes).margin

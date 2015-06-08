@@ -1,0 +1,13 @@
+mixin import-script(lib)
+
+  //- 調べたかったらこれで
+  //- curl -s  http://api.cdnjs.com/libraries?search=backbone | json_pp | grep backbone.min.js
+
+  - var url = {}
+  - url.jquery = "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+  - url.backbone = "http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"
+  - url.underscore = "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
+  - url.riot = "http://cdnjs.cloudflare.com/ajax/libs/riot/2.0.15/riot.min.js"
+  - url.vue = "http://cdnjs.cloudflare.com/ajax/libs/vue/0.11.5/vue.min.js"
+
+  script(src = "#{url[lib]}")

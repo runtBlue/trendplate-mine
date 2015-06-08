@@ -1,0 +1,17 @@
+/* @1x */
+{{#items}}
+
+$sprite--{{name}}()
+  box-sizing border-box
+  width {{px.width}}
+  height {{px.height}}
+  overflow hidden
+  background-image url("{{{escaped_image}}}")
+  background-position {{px.offset_x}} {{px.offset_y}}
+
+.sprite--{{name}}
+  padding-top {{px.height}}
+  width {{px.width}}
+  background-image url("{{{escaped_image}}}")
+  background-position {{px.offset_x}} {{px.offset_y}}
+{{/items}}

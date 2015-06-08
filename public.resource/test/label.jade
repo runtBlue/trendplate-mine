@@ -1,0 +1,45 @@
+include /assets/elements/main
+
+doctype
++html(lang="ja")
+  +head
+    +title +label() - Tests
+  +body
+    .page
+      section.page__body.padding--lr-1rem
+        p
+          label
+            input(type="checkbox")
+            |  label
+        p
+          label.label
+            input(type="checkbox")
+            |  label.label
+        p
+          label.label(for="id1")
+            input(type="checkbox" id="id1")
+            |  label.label(for="id1")
+        p
+          +label()
+            input(type="checkbox")
+            |  +label()
+        p
+          +label(for="")
+            input(type="checkbox")
+            |  +label(for="")
+        p
+          +label(for="id2")
+            input(type="checkbox" id="id2")
+            |  +label(for="id2")
+        p
+          +label
+            +checkbox
+            |  +label()
+        p
+          +label(for="")
+            +checkbox
+            |  +label(for="")
+        p
+          +label(for="id3")
+            +checkbox(id="id3")
+            |  +label(for="id3")

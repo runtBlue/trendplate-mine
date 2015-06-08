@@ -1,0 +1,15 @@
+.textarea
+  padding-top 0.3em
+  padding-left 0.4em
+  border-color black
+  line-height 1.5
+
+  +placeholder()
+    color darkgray
+
+  &[data-placeholder="true"]
+    color darkgray
+
+  &:focus
+    +placeholder()
+      color transparent

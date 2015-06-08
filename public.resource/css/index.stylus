@@ -1,0 +1,5 @@
+index()
+  color: #eeffee
+
+h1
+  index()

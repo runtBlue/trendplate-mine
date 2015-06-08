@@ -1,0 +1,50 @@
+.checkbox
+  vertical-align 8%
+
+  &__box
+    position relative
+    display inline-block
+    padding 1px
+    width 1em
+    height 1em
+    overflow hidden
+    vertical-align middle
+
+  &__check
+    position absolute
+    top 0
+    left 0
+    z-index 1
+    display block
+    width 1em
+    height 1em
+    overflow hidden
+    border 1px solid
+    border-radius 4px
+    background-color white
+
+    &:before
+      content "L"
+      display block
+      margin 0 auto
+      width 0.6em
+      color white
+      font-weight bold
+      line-height 0.8
+      user-select none
+      transform scaleX(-1) rotate(-40deg)
+
+  &__self
+    position relative
+    z-index 2
+    display block
+    width 1em
+    height 1em
+    opacity 0
+    cursor pointer
+
+    &:checked + span
+      background-color black
+
+    span.label &
+      display none

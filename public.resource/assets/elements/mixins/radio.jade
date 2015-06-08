@@ -1,0 +1,16 @@
+mixin radio
+
+  //- Usage: +radio(checked="true")
+
+  - var classes = attributes.class
+  - attributes.class = null
+
+  span.radio(
+    class=classes
+  )
+    span.radio__box
+      input&attributes(attributes).radio__self(
+        type="radio"
+        autocomplete="off"
+      )
+      span.radio__check

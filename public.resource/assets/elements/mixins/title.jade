@@ -1,0 +1,11 @@
+mixin title
+
+  //-
+    - Usage: +title #{pageName}
+    - Yield: title= #{pageName} + #{siteName}
+
+  - var siteName = " - HTML6"
+
+  title
+    block
+    | #{siteName}

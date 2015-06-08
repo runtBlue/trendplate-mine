@@ -1,0 +1,16 @@
+mixin spacer
+
+  //-
+    - Usage: +spacer(by="2")
+    - Yield: span.spacer(style="width: 2em;")
+
+  - var by = attributes.by
+  - attributes.by = null
+
+  if (by)
+    if (attributes.style)
+      - attributes.style += "; width:" + by + "em;"
+    else
+      - attributes.style = "width:" + by + "em;"
+
+  span&attributes(attributes).spacer

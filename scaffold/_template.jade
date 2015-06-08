@@ -1,0 +1,27 @@
+include /assets/elements/main
+
+doctype
++html(lang="ja")
+  +head
+    +title <%= name %> Test
+  +body
+    .page
+      section.page__body
+        h1.margin--lr-1rem HTML6 Tests
+        ul.line-height--xx-wide
+          li
+            a(href="test/accordion.html") +accordion()
+          li
+            a(href="test/checkbox.html") +checkbox()
+          li
+            a(href="test/details.html") +details()
+          li
+            a(href="test/form.html") form
+          li
+            a(href="test/label.html") +label()
+          li
+            a(href="test/rating.html") +rating()
+          li
+            a(href="test/rem.html") rem
+          li
+            a(href="test/switch.html") +switch()

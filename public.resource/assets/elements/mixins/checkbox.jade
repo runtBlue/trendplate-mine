@@ -1,0 +1,16 @@
+mixin checkbox
+
+  //- Usage: +checkbox(checked="true")
+
+  - var classes = attributes.class
+  - attributes.class = null
+
+  span.checkbox(
+    class=classes
+  )
+    span.checkbox__box
+      input&attributes(attributes).checkbox__self(
+        type="checkbox"
+        autocomplete="off"
+      )
+      span.checkbox__check

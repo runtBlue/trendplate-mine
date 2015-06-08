@@ -1,0 +1,18 @@
+mixin label
+
+  //- Usage: +label(for="id")
+
+  if (attributes.for === "")
+    - attributes.for = null
+  else
+    - var targetId = attributes.for
+    - attributes.for = null
+
+  if (targetId)
+    span&attributes(attributes).label(
+      onclick="NS.label({for:'#{targetId}'})"
+      )
+      block
+  else
+    label&attributes(attributes).label
+      block
